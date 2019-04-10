@@ -1,0 +1,242 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    font-size: 14px;
+    color: #AAA !important;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.border-top {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+nav{
+    background-color: black;
+}
+.nav-link{
+    color: #AAA !important;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: black;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    line-height: 60px; /* Vertically center the text there */
+}
+footer {
+    background: #000;
+    color: #FFF !important;
+    height: 4em !important;
+    text-align: center;
+    margin-top: 20px;
+}
+
+    footer [class^="icon-"] {
+        display: inline-block;
+        color: #333;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 50%;
+        width: 30px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+#lblCarrito [class^="icon-"]:before,
+[class*=" icon-"]:before {
+    padding-right: 10px;
+    font-size: 25px;
+    position: absolute;
+    right: -30px;
+}
+
+.nav-item [class^="icon-"]:before,
+.nav-item [class*=" icon-"]:before {
+    right: -0px;
+}
+
+.iconCarritoPop:before {
+    padding-right: 0px;
+    font-size: small;
+    position: relative;
+    right: 0px;
+}
+
+#liCategorias, #liCarrito {
+    padding-right: 28px;
+}
+
+.titleCarritoPop {
+    font-size: smaller !important;
+}
+
+.carritoBody {
+    font-size: x-small !important;
+}
+
+.carritoBody {
+    font-size: x-small !important;
+}
+
+.iconCarritoPop {
+    font-size: x-small !important;
+}
+
+.quantity-icon {
+    position: absolute;
+    cursor: pointer;
+    left: 82px;
+    line-height: 14px;
+    top: 8px;
+    font-size: small;
+}
+
+.dropdownHeader {
+    top: 85% !important;
+}
+
+#dropDownCarrito,
+#dropdownCategorias {
+    display: none;
+}
+
+.col-sm-3 {
+    padding-bottom: 10px;
+}
+
+.card {
+    height: 200px;
+    width: 200px;
+    display:inline-block;
+}
+
+.cardBodyBottom {
+    bottom: 0px;
+}
+
+img {
+    width: 100%;
+}
+
+.cardBodyImg {
+    height: 100%;
+    text-align: center;
+}
+
+.card-footer strike {
+    color: red;
+}
+
+.inputFile {
+    display: none;
+}
+
+strike {
+    color: red;
+}
+
+.click {
+    cursor: pointer;
+}
+
+.btn, .iconCarritoPop {
+    cursor: pointer;
+}
+
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('../imgproductos/page-loader.gif') 50% 50% no-repeat rgb(249,249,249);
+    opacity: .8;
+}
+
+.cardBodyBottom {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: left;
+    color: black;
+}
+.divCategorias {
+    width: 95%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display:inline-block;
+}
+#prev-icon {
+    background-color: #666;
+    color: blue;
+    height: 200px;
+    width: 2%;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0.5;
+}
+#next-icon {
+    background-color: #666;
+    color: blue;
+    height: 200px;
+    width: 2%;
+    display: inline-block;
+    cursor: pointer;
+    opacity: 0.5;
+}
+.container{
+    max-width: 96%;
+}
+.contenedor {
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    transform: translate(-50%) translateY(-50%);
+    width: 100%;
+    color: white;
+    text-align: center;
+}

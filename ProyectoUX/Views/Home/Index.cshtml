@@ -1,0 +1,80 @@
+﻿@model IEnumerable<Peliculas>
+@{
+    ViewData["Title"] = "Home Page";
+    var lstCategorias = ViewBag.lstCategorias.Split('.');
+}
+
+<style>
+</style>
+
+<div id="carrusel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ul class="carousel-indicators">
+        <li data-target="#carrusel" data-slide-to="0" class="active"></li>
+        <li data-target="#carrusel" data-slide-to="1" class=""></li>
+        <li data-target="#carrusel" data-slide-to="2" class=""></li>
+    </ul>
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100 img-responsive" src="~/images/banner2.svg" alt="Second slide">
+            <p class="contenedor">Nombre</p>
+        </div>
+        @for (int ind = 0; ind < 3; ind++)
+        {
+            var pelicula = Model.ElementAt(ind);
+            var imagen = "./" + pelicula.Poster;
+            <div class="carousel-item">
+                <img class="d-block w-100 img-responsive" src="/home/mostrarImagen/?imagen=@imagen" alt="First slide" width="100%" height="400px">
+                <p class="contenedor">@pelicula.Nombre</p>
+            </div>
+        }
+    </div>
+    <!-- Left and right controls -->
+    <a class="carousel-control-prev" href="#carrusel" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#carrusel" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+</div>
+
+@for (int indCategorias = 0; indCategorias < lstCategorias.Length; indCategorias++)
+{
+    var categoria = lstCategorias[indCategorias];
+    var indPeliculas = 0;
+    <p class="tituloCategoria" style=" display: inline-block;">@categoria</p>
+    <div>
+        <span class="carousel-control-prev-icon" id="prev-icon"></span>
+        <div id="div_@categoria" class="divCategorias">
+            <div class="row" style="width:250%;">
+                @for (int ind = 0; ind < Model.Count(); ind++)
+                {
+                    var pelicula = Model.ElementAt(ind);
+                    if (pelicula.Genero.ToList().Exists(x => x == categoria))
+                    {
+                        indPeliculas++;
+                        var imagen = "./" + pelicula.Poster;
+                        <div class="col-sm-1">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="cardBodyImg">
+                                        <img src="/home/mostrarImagen/?imagen=@imagen" alt="" class="img-responsive">
+                                    </div>
+                                    <div class="cardBodyBottom">
+                                        <p class="lead">@pelicula.Nombre</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        if (indPeliculas == 11)
+                        {
+                            break;
+                        }
+                    }
+                }
+            </div>
+        </div>
+        <span class="carousel-control-next-icon" id="next-icon"></span>
+    </div>
+}
