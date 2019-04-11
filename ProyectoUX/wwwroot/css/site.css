@@ -155,10 +155,22 @@ img {
     height: 100%;
     text-align: center;
 }
-.card:hover {
-    transform: scale(1.5);
+.card {
+    transition: .10s, transform .10s ease;
+    -moz-transition: .10s, transform .10s ease;
+    -webkit-transition: .10s, transform .10s ease;
 }
-
+card-body{
+    padding: 0px !important;
+}
+.card:hover {
+  -ms-transform: scale(1.25); /* IE 9 */
+  -webkit-transform: scale(1.25); /* Safari */
+  transform: scale(1.25);
+}
+.card:hover .cardBodyBottom{
+    left: 60%;
+}
 .card-footer strike {
     color: red;
 }

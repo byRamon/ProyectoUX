@@ -26,8 +26,8 @@
                 var imagen = pelicula.Poster;
                 if (imagen == null || imagen == "") { imagen = "/images/img-no-disponible.png"; }
                 <div class="@clase">
-                    <img class="d-block w-100 img-responsive imgCarrucel" src="/home/mostrarImagen/?imagen=@imagen" alt="Second slide">
                     <a href="/home/Details/?pelicula=@pelicula.Nombre">
+                        <img class="d-block w-100 img-responsive imgCarrucel" src="/home/mostrarImagen/?imagen=@imagen" alt="Second slide">
                         <p class="contenedor"><strong>@pelicula.Nombre</strong></p>
                     </a>
                 </div>
