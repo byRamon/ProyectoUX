@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ProyectoUX</title>
+    <title>WepVideo</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -15,13 +15,14 @@
               crossorigin="anonymous"
               integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE="/>
     </environment>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand text-danger" asp-area="" asp-controller="Home" asp-action="Index">ProyectoUX</a>
+                <a class="navbar-brand text-danger" asp-area="" asp-controller="Home" asp-action="Index"> <h1>WepVideo</h1> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -30,7 +31,7 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            @*<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
                         </li>
                     </ul>
                 </div>
@@ -45,8 +46,15 @@
     </div>
 
     <footer class="border-top footer text-muted">
-        <div class="container nav-link">
-            &copy; 2019 - ProyectoUX - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div class="container nav-link" style="display:inline-block">
+            &copy; 2019 - WepVideo - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
+            <div class="social-section text-center" style="display:inline-block">
+                <ul class="list-unstyled list-inline">
+                    <li class="list-inline-item"><a href="https://www.facebook.com/" class="btn-floating btn-fb"><i class="fab fa-facebook"> </i></a></li>
+                    <li class="list-inline-item"><a href="https://twitter.com/" class="btn-floating btn-tw"><i class="fab fa-twitter"> </i></a></li>
+                    <li class="list-inline-item"><a href="https://www.youtube.com/" class="btn-floating btn-gplus"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 

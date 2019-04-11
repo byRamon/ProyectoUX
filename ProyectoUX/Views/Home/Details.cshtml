@@ -1,0 +1,51 @@
+﻿@model Peliculas
+@{
+    ViewData["Title"] = "Details";
+    var imagen = "./" + Model.Poster;
+}
+
+<h1>@Model.Nombre</h1>
+
+<div class="row">
+    <div class="col-sm-4">
+        <img src="/home/mostrarImagen/?imagen=@imagen" alt="" class="img-responsive">
+    </div>
+    <div class="col-sm-8">
+        <div class="row">
+            <h5>Categorias</h5>
+        </div>
+        <div class="row">
+            @for (int ind = 0; ind < Model.Genero.Length; ind++)
+            {
+                var genero = Model.Genero[ind];
+                if (ind > 0)
+                {<spam>,&nbsp;</spam>}
+                <a href="/home/index/?shGenero=@genero">@genero</a>
+            }
+        </div>
+        <br />
+        <div class="row">
+            <h5>Actores</h5>
+        </div>
+        <div class="row">
+            @for (int ind = 0; ind < Model.Actores.Length; ind++)
+            {
+                var actor = Model.Actores[ind];
+                if (ind > 0)
+                {<spam>,&nbsp;</spam>}
+                <a href="/home/index/?shActor=@actor">@actor</a>
+            }
+        </div>
+        <br />
+        <div class="row">
+            <h5>Sinopsis</h5>
+        </div>
+        <div class="row">
+            @Model.Descripcion
+        </div>
+        <br />
+        <div class="row">
+            <a href="/home/Reproductor/?pelicula=@Model.Nombre">Reproducir</a>
+        </div>
+    </div>
+</div>
