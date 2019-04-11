@@ -170,6 +170,8 @@ card-body{
 }
 .card:hover .cardBodyBottom{
     left: 60%;
+    z-index: 1;
+    color: #AAA !important
 }
 .card-footer strike {
     color: red;
@@ -210,6 +212,7 @@ strike {
     transform: translateX(-50%) translateY(-50%);
     text-align: left;
     color: black;
+    z-index: -1;
 }
 .divCategorias {
     width: 95%;
@@ -251,10 +254,10 @@ strike {
     left: 20%;
     transform: translate(-50%) translateY(-50%);
     width: 100%;
-    color: black;
+    color: #AAA;
     text-align: center;
     font: bold;
-    font-size: large;
+    font-size: xx-large;
 }
 .lead {
     color: black;
@@ -274,7 +277,7 @@ strike {
     text-align:center;
     padding-bottom:10px;
 }
-.navbar-nav > .nav-link:hover {
+.linkMenu:hover {
     color: blue;
     background-color: white;
 }

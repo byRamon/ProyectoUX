@@ -1,14 +1,15 @@
 ﻿@model Peliculas
 @{
     ViewData["Title"] = "Details";
-    var imagen = "./" + Model.Poster;
+    var imagen = Model.Poster;
+    if (imagen == null || imagen == "") { imagen = "/images/img-no-disponible.png"; }
 }
 
 <h1>@Model.Nombre</h1>
 
 <div class="row">
     <div class="col-sm-4">
-        <img src="/home/mostrarImagen/?imagen=@imagen" alt="" class="img-responsive">
+        <img src="@imagen" alt="" class="img-responsive">
     </div>
     <div class="col-sm-8">
         <div class="row">
