@@ -1,6 +1,9 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+* {
+    box-sizing: border-box;
+}
 a.navbar-brand {
     white-space: normal;
     text-align: center;
@@ -152,6 +155,9 @@ img {
     height: 100%;
     text-align: center;
 }
+.card:hover {
+    transform: scale(1.5);
+}
 
 .card-footer strike {
     color: red;
@@ -259,4 +265,20 @@ strike {
 .navbar-nav > .nav-link:hover {
     color: blue;
     background-color: white;
+}
+
+video#myVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 70%;
+    min-height: 70%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
 }
