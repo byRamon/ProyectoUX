@@ -143,10 +143,6 @@ body {
     display:inline-block;
 }
 
-.cardBodyBottom {
-    bottom: 0px;
-}
-
 img {
     width: 100%;
 }
@@ -208,11 +204,12 @@ strike {
     position: absolute;
     top: 70%;
     left: 50%;
-    width: 100%;
+    width: 85%;
     transform: translateX(-50%) translateY(-50%);
     text-align: left;
     color: black;
     z-index: -1;
+    bottom: 0px;
 }
 .divCategorias {
     width: 95%;
@@ -306,5 +303,6 @@ video#myVideo {
     height:35px;
 }
 #shBusqueda:focus{
-    background-color: #BBB;
+    background-color: #EEE;
+    color: black;
 }

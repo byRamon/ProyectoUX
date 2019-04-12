@@ -46,20 +46,24 @@
 @for (int indCategorias = 0; indCategorias < lstCategorias.Length; indCategorias++)
 {
     var categoria = lstCategorias[indCategorias];
+    var lstPaliculas = Model.ToList().FindAll(x => String.Join(',', x.Genero).Contains(categoria));
     var indPeliculas = 0;
     <p class="tituloCategoria" style=" display: inline-block;">@categoria</p>
     <div>
-        <span class="carousel-control-prev-icon" id="prev-icon" target="div_@categoria" direction="left" onclick="ScrollDiv(this);"></span>
+        @if (lstPaliculas.Count > 5)
+        {
+            <span class="carousel-control-prev-icon" id="prev-icon" target="div_@categoria" direction="left" onclick="ScrollDiv(this);"></span>
+        }
         <div id="div_@categoria" class="divCategorias">
             <div class="row" style="width:250%;">
-                @for (int ind = 0; ind < Model.Count(); ind++)
+                @for (int ind = 0; ind < lstPaliculas.Count; ind++)
                 {
-                    var pelicula = Model.ElementAt(ind);
+                    var pelicula = lstPaliculas.ElementAt(ind);
                     if (pelicula.Genero.ToList().Exists(x => x == categoria))
                     {
                         indPeliculas++;
                         var imagen = pelicula.Poster;
-                        if(imagen == null || imagen == "") { imagen = "/images/img-no-disponible.png"; }
+                        if (imagen == null || imagen == "") { imagen = "/images/img-no-disponible.png"; }
                         <a href="/home/Details/?pelicula=@pelicula.Nombre">
                             <div class="col-sm-1">
                                 <div class="card">
@@ -82,6 +86,9 @@
                 }
             </div>
         </div>
-        <span class="carousel-control-next-icon" id="next-icon" target="div_@categoria" direction="right" onclick="ScrollDiv(this);"></span>
-    </div>
+        @if (lstPaliculas.Count > 5)
+        {
+            <span class="carousel-control-next-icon" id="next-icon" target="div_@categoria" direction="right" onclick="ScrollDiv(this);"></span>
+        }
+        </div>
 }
