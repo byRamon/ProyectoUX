@@ -59,12 +59,13 @@
                 @for (int ind = 0; ind < lstPaliculas.Count; ind++)
                 {
                     var pelicula = lstPaliculas.ElementAt(ind);
+                    var cardCategorias = "card_" + categoria;
                     if (pelicula.Genero.ToList().Exists(x => x == categoria))
                     {
                         indPeliculas++;
                         var imagen = pelicula.Poster;
                         if (imagen == null || imagen == "") { imagen = "/images/img-no-disponible.png"; }
-                        <a href="/home/Details/?pelicula=@pelicula.Nombre">
+                        <a href="/home/Details/?pelicula=@pelicula.Nombre" class="@cardCategorias">
                             <div class="col-sm-1">
                                 <div class="card">
                                     <div class="card-body" style="padding:0px;">
