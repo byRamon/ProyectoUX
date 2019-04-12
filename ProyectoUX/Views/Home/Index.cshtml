@@ -27,7 +27,7 @@
                 if (imagen == null || imagen == "") { imagen = "/images/img-no-disponible.png"; }
                 <div class="@clase">
                     <a href="/home/Details/?pelicula=@pelicula.Nombre">
-                        <img class="d-block w-100 img-responsive imgCarrucel" src="/home/mostrarImagen/?imagen=@imagen" alt="Second slide">
+                        <img class="d-block w-100 img-responsive imgCarrucel" src="/home/mostrarImagen/?imagen=@imagen" alt="Second slide" title="@pelicula.Nombre">
                         <p class="contenedor"><strong>@pelicula.Nombre</strong></p>
                     </a>
                 </div>
@@ -65,7 +65,7 @@
                                 <div class="card">
                                     <div class="card-body" style="padding:0px;">
                                         <div class="cardBodyImg">
-                                            <img src="@imagen" alt="" class="img-responsive">
+                                            <img src="@imagen" alt="" class="img-responsive" title="@pelicula.Nombre">
                                         </div>
                                         <div class="cardBodyBottom">
                                             <p class="lead"><strong>@pelicula.Nombre</strong></p>

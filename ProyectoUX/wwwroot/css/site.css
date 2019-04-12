@@ -206,7 +206,7 @@ strike {
 
 .cardBodyBottom {
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 50%;
     width: 100%;
     transform: translateX(-50%) translateY(-50%);
@@ -260,7 +260,7 @@ strike {
     font-size: xx-large;
 }
 .lead {
-    color: black;
+    color: #AAA;
     font: bold;
     font-size: medium;
 }
