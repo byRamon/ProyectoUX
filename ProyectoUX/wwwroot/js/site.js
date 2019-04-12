@@ -1,4 +1,4 @@
-﻿function ScrollDiv(btn) {
+﻿function ScrollDiv(btn, claseCategoria) {
     var div = btn.getAttribute("target");
     var direccion = btn.getAttribute("direction");
     var ubicacion = $("#" + div).scrollLeft();

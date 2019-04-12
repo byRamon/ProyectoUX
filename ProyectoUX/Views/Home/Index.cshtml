@@ -48,18 +48,18 @@
     var categoria = lstCategorias[indCategorias];
     var lstPaliculas = Model.ToList().FindAll(x => String.Join(',', x.Genero).Contains(categoria));
     var indPeliculas = 0;
+    var cardCategorias = "card_" + categoria.Substring(0,3);
     <p class="tituloCategoria" style=" display: inline-block;">@categoria</p>
     <div>
         @if (lstPaliculas.Count > 5)
         {
-            <span class="carousel-control-prev-icon" id="prev-icon" target="div_@categoria" direction="left" onclick="ScrollDiv(this);"></span>
+            <span class="carousel-control-prev-icon" id="prev-icon" target="div_@categoria" direction="left" onclick="ScrollDiv(this, '@cardCategorias');"></span>
         }
         <div id="div_@categoria" class="divCategorias">
             <div class="row" style="width:250%;">
                 @for (int ind = 0; ind < lstPaliculas.Count; ind++)
                 {
                     var pelicula = lstPaliculas.ElementAt(ind);
-                    var cardCategorias = "card_" + categoria;
                     if (pelicula.Genero.ToList().Exists(x => x == categoria))
                     {
                         indPeliculas++;
@@ -89,7 +89,7 @@
         </div>
         @if (lstPaliculas.Count > 5)
         {
-            <span class="carousel-control-next-icon" id="next-icon" target="div_@categoria" direction="right" onclick="ScrollDiv(this);"></span>
+            <span class="carousel-control-next-icon" id="next-icon" target="div_@categoria" direction="right" onclick="ScrollDiv(this, '@cardCategorias');"></span>
         }
         </div>
 }
