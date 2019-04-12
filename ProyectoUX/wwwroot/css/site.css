@@ -297,3 +297,14 @@ video#myVideo {
     transform: translateX(-50%) translateY(-50%);
     background-size: cover;
 }
+#btnDetalleRegresar{
+    margin-left: 5px;
+}
+#shBusqueda {
+    background-color: #555;
+    border: none;
+    height:35px;
+}
+#shBusqueda:focus{
+    background-color: #BBB;
+}

@@ -374,12 +374,12 @@ namespace ProyectoUX.Data
             Contenido.Add(
                 new Peliculas()
                 {
-                    Nombre = "",
-                    Genero = "".Split(','),
-                    Descripcion = "",
-                    Actores = "".Split(','),
-                    Anio = 2019,
-                    Poster = "",
+                    Nombre = "Aladdín",
+                    Genero = "Animación,Aventura,Infantil".Split(','),
+                    Descripcion = "El filme comienza con el intento de Jafar, Gran Visir del Sultán de la ficticia ciudad de Agrabah, de acceder a la Cueva de las Maravillas, ya que en su interior hay una lámpara de aceite que contiene un genio. No obstante, este y su loro Iago necesitan de Aladdín para poder entrar en la cueva. A la par de esta situación, Jasmín",
+                    Actores = "Scott Weinger,Robin Williams".Split(','),
+                    Anio = 1992,
+                    Poster = "aladin.jpg",
                 });
             Contenido.Add(
                 new Peliculas()

@@ -10,7 +10,7 @@ namespace ProyectoUX.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index(string shActor, string shGenero)
+        public IActionResult Index(string shActor, string shGenero, string shBusqueda)
         {
             bool busqueda = false;
             List<Peliculas> lstPeliculas = ProyectoUX.Data.SeedData.Contenido();
@@ -22,6 +22,13 @@ namespace ProyectoUX.Controllers
             if (shGenero != null && shGenero != "")
             {
                 lstPeliculas = lstPeliculas.FindAll(x => String.Join(',', x.Genero).Contains(shGenero));
+                busqueda = true;
+            }
+            if (shBusqueda != null && shBusqueda != "")
+            {
+                lstPeliculas = lstPeliculas.FindAll(x => String.Join(',', x.Genero).Contains(shBusqueda) ||
+                String.Join(',', x.Actores).Contains(shBusqueda) ||
+                x.Nombre.ToUpper().Contains(shBusqueda.ToUpper().Trim()));
                 busqueda = true;
             }
             List<string> lstCategorias = new List<string>();

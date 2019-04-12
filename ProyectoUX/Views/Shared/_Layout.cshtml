@@ -29,6 +29,14 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
+                    <form action="/home/Index" method="post">
+                        <table>
+                            <tr>
+                                <td><input class="form-control form-control-lg form-control-borderless" type="search" placeholder="Que deseas ver?" name="shBusqueda" id="shBusqueda"></td>
+                                @*<td><button class="btn btn-info" type="submit">Buscar</button></td>*@
+                            </tr>
+                        </table>
+                    </form>
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
                             @*<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>*@
